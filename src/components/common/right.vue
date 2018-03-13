@@ -1,6 +1,6 @@
 <template>
   <div class="right-side">
-    <p>右侧内容</p>
+    <p>右2侧内容</p>
   </div>
 </template>
 <script>
