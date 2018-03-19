@@ -1,6 +1,18 @@
 <template>
   <div class="right-side">
     <p>右3侧内容</p>
+    <p>右3侧内容</p>
+    <p>右3侧内容</p>
+    <p>右3侧内容</p>
+    <p>右3侧内容</p>
+    <p>右3侧内容</p>
+    <p>右3侧内容</p>
+    <p>右3侧内容</p>
+    <p>右3侧内容</p>
+    <p>右3侧内容</p>
+    <p>右3侧内容</p>
+    <p>右3侧内容</p>
+    <p>右3侧内容</p>
   </div>
 </template>
 <script>
@@ -12,13 +24,7 @@ export default {
 <style>
 .right-side {
   background-color: lightgreen;
-  float: left;
-  display: block;
-}
-
-.left-side {
-  float: left;
-  width: 80px;
+  margin-left: 140px;
 }
 
 </style>

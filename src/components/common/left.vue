@@ -1,27 +1,77 @@
 <template>
   <div class="left-side">
-    <ul>
-      <li>
-        <li>
-          111
-        </li>
-      </li>
-      <li>
-        <li>
-          111
-        </li>
-      </li>
-      <li>
-        <li>
-          111
-        </li>
-      </li>
-      <li>
-        <li>
-          111
-        </li>
-      </li>
-    </ul>
+    <div class="left-inside">
+      <ul>
+        <li>1221312</li>
+        <li>1221312</li>
+        <li>1221312</li>
+        <li>1221312</li>
+        <li>1221312</li>
+        <li>1221312</li>
+        <li>1221312</li>
+        <li>1221312</li>
+        <li>1221312</li>
+        <li>1221312</li>
+        <li>1221312</li>
+        <li>1221312</li>
+        <li>1221312</li>
+        <li>1221312</li>
+        <li>1221312</li>
+        <li>1221312</li>
+        <li>1221312</li>
+        <li>1221312</li>
+        <li>1221312</li>
+        <li>1221312</li>
+        <li>1221312</li>
+        <li>1221312</li>
+        <li>1221312</li>
+        <li>1221312</li>
+        <li>1221312</li>
+        <li>1221312</li>
+        <li>1221312</li>
+        <li>1221312</li>
+        <li>1221312</li>
+        <li>1221312</li>
+        <li>1221312</li>
+        <li>1221312</li>
+        <li>1221312</li>
+        <li>1221312</li>
+        <li>1221312</li>
+        <li>1221312</li>
+        <li>1221312</li>
+        <li>1221312</li>
+        <li>1221312</li>
+        <li>1221312</li>
+        <li>1221312</li>
+        <li>1221312</li>
+        <li>1221312</li>
+        <li>1221312</li>
+        <li>1221312</li>
+        <li>1221312</li>
+        <li>1221312</li>
+        <li>1221312</li>
+        <li>1221312</li>
+        <li>1221312</li>
+        <li>1221312</li>
+        <li>1221312</li>
+        <li>1221312</li>
+        <li>1221312</li>
+        <li>1221312</li>
+        <li>1221312</li>
+        <li>1221312</li>
+        <li>1221312</li>
+        <li>1221312</li>
+        <li>1221312</li>
+        <li>1221312</li>
+        <li>1221312</li>
+        <li>1221312</li>
+        <li>1221312</li>
+        <li>1221312</li>
+        <li>1221312</li>
+        <li>1221312</li>
+        <li>1221312</li>
+      </ul>
+    </div>
   </div>
 </template>
 <script>
@@ -31,9 +81,25 @@ export default {
 
 </script>
 <style scoped>
-ul {
+.left-side {
   list-style-type: none;
-  width: 60px;
+  width: 140px;
   height: 100%;
+  float: left;
+  position: fixed;
+  overflow-x: hidden;
+  background: #eaeaea;
 }
+
+.left-inside {
+  width: 160px;
+  height: 100%;
+  overflow-y:scroll;
+}
+
+
+li ,ul{
+  width: 160px;
+}
+
 </style>
