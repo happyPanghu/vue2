@@ -7,9 +7,7 @@
         <li>1221312</li>
         <li>1221312</li>
 	<li>ssssssssssssssssssssssssssss</li>
-	<li>3</li>
 	<li>1</li>
-	<li>2</li>
       </ul>
     </div>
   </div>
