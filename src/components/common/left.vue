@@ -2,12 +2,18 @@
   <div class="left-side">
     <div class="left-inside">
       <ul>
-        <li>1221312</li>
-        <li>1221312</li>
-        <li>1221312</li>
-        <li>1221312</li>
-	<li>ssssssssssssssssssssssssssss</li>
-	<li>1</li>
+        <li>
+          <router-link to="/">首页</router-link>
+        </li>
+        <li>
+          <router-link to="/sec">第二页</router-link>
+        </li>
+        <li>
+          <router-link to="/thi">第三页</router-link>
+        </li>
+        <li>
+          <router-link to="/four">第四页</router-link>
+        </li>
       </ul>
     </div>
   </div>
@@ -32,11 +38,12 @@ export default {
 .left-inside {
   width: 160px;
   height: 100%;
-  overflow-y:scroll;
+  overflow-y: scroll;
 }
 
 
-li ,ul{
+li,
+ul {
   width: 160px;
 }
 

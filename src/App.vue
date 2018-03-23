@@ -1,8 +1,6 @@
 <template>
   <div id="app">
     <router-view class="view" />
-    <router-view class="view " name="left"></router-view>
-    <router-view class="view " name="right"></router-view>
   </div>
 </template>
 <script>
