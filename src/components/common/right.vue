@@ -1,18 +1,6 @@
 <template>
   <div class="right-side">
-    <p>右3侧内容</p>
-    <p>右3侧内容</p>
-    <p>右3侧内容</p>
-    <p>右3侧内容</p>
-    <p>右3侧内容</p>
-    <p>右3侧内容</p>
-    <p>右3侧内容</p>
-    <p>右3侧内容</p>
-    <p>右3侧内容</p>
-    <p>右3侧内容</p>
-    <p>右3侧内容</p>
-    <p>右3侧内容</p>
-    <p>右3侧内容</p>
+    <router-view />
   </div>
 </template>
 <script>
