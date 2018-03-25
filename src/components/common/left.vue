@@ -12,7 +12,7 @@
           <router-link to="/thi">第三页</router-link>
         </li>
         <li>
-          <router-link to="/four">第四页</router-link>
+          <router-link to="/forth">第四页</router-link>
         </li>
       </ul>
     </div>
