@@ -5,35 +5,37 @@ import layout from '@/components/layout'
 import sec from '@/components/sec'
 import thi from '@/components/thi'
 import forth from '@/components/forth'
+import login from '@/components/login/login'
 
 Vue.use(Router)
 
 export default new Router({
   mode: 'history',
-  routes: [
-    {
+  routes: [{
       path: '/',
       component: layout,
-      children: [
-        {
+      children: [{
           path: 'sec',
           component: sec
         },
         {
           path: 'thi',
           name: 'thi',
-          component:thi
+          component: thi
         },
         {
           path: 'forth',
           name: 'forth',
-          component:forth
+          component: forth
         }
       ]
     },
-     {
-       path: '*',
-       component: HelloWorld
-     }
+    {
+      path: '*',
+      component: HelloWorld
+    }, {
+      path: '/login',
+      component: login
+    }
   ]
 })
