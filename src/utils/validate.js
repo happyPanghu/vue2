@@ -1,21 +1,12 @@
-/**
- *api 及文档 来自于
- *http://vee-validate.logaretm.com/localization.html#localized-files
- */
+//http://vee-validate.logaretm.com/localization.html#localized-files
 import Vue from 'vue'
 import VeeValidate, { Validator } from 'vee-validate'
 import zh from 'vee-validate/dist/locale/zh_CN'; //引入中文文件
 
-/*
-
+/**
  *message  校验方法出错的提示
  *attributes 目标对象的中文名称(只对已定义的生效，未定义过的 需指定 data-vv-as)
  */
-
-/**
- * @author [lisen]
- */
-
 
 const dictionary = {
   locale: 'zh_CN',
