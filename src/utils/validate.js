@@ -1,39 +1,48 @@
-export function isvalidUsername(str) {
-  const valid_map = ['admin', 'editor']
-  return valid_map.indexOf(str.trim()) >= 0
-}
+/**
+ *api 及文档 来自于
+ *http://vee-validate.logaretm.com/localization.html#localized-files
+ */
+import Vue from 'vue'
+import VeeValidate, { Validator } from 'vee-validate'
+import zh from 'vee-validate/dist/locale/zh_CN'; //引入中文文件
 
-/* 合法uri*/
-export function validateURL(textval) {
-  const urlregex = /^(https?|ftp):\/\/([a-zA-Z0-9.-]+(:[a-zA-Z0-9.&%$-]+)*@)*((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[1-9][0-9]?)(\.(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[1-9]?[0-9])){3}|([a-zA-Z0-9-]+\.)*[a-zA-Z0-9-]+\.(com|edu|gov|int|mil|net|org|biz|arpa|info|name|pro|aero|coop|museum|[a-zA-Z]{2}))(:[0-9]+)*(\/($|[a-zA-Z0-9.,?'\\+&%$#=~_-]+))*$/
-  return urlregex.test(textval)
-}
+/*
 
-/* 小写字母*/
-export function validateLowerCase(str) {
-  const reg = /^[a-z]+$/
-  return reg.test(str)
-}
-
-/* 大写字母*/
-export function validateUpperCase(str) {
-  const reg = /^[A-Z]+$/
-  return reg.test(str)
-}
-
-/* 大小写字母*/
-export function validatAlphabets(str) {
-  const reg = /^[A-Za-z]+$/
-  return reg.test(str)
-}
+ *message  校验方法出错的提示
+ *attributes 目标对象的中文名称(只对已定义的生效，未定义过的 需指定 data-vv-as)
+ */
 
 /**
- * validate email
- * @param email
- * @returns {boolean}
+ * @author [lisen]
  */
-export function validateEmail(email) {
-  const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-  return re.test(email)
-}
 
+
+const dictionary = {
+  locale: 'zh_CN',
+  dictionary: {
+    zh_CN: {
+      messages: {
+        email: () => '请输入正确的邮箱格式',
+        required: (field) => "请您输入" + field,
+        phone: () => '格式',
+        username: () => '请输入正确的用户名',
+        min: (field, num) => '最小' + num + '位',
+        max: (field, num) => '最大' + num + '位'
+      },
+      attributes: {
+        email: '邮箱',
+        password: '密码',
+        name: '账号',
+        phone: '手机'
+      }
+    }
+  }
+};
+
+
+/*Validator.extend('username', {
+  getMessage: field => '用户名必须大于3位',
+  validate: value =>  value.length>3
+});*/
+
+Vue.use(VeeValidate, dictionary);

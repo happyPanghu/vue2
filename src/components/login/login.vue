@@ -2,11 +2,12 @@
   <div>
     <form :model="loginForm">
       <div class="from-wrapper">
-        <span>{{ loginName }}</span>
-        <input type="text" v-model="loginForm.username" placeholder="">
+        <span>账号：</span>
+        <input type="text" name="username" v-validate="'required|max:6|min:4'" data-vv-as="用户名" v-model="loginForm.username">
+        <p v-show="errors.has('username')" class="help haha">{{ errors.first('username') }}</p>
       </div>
       <div class="from-wrapper">
-        <span>{{ loginpw }}</span>
+        <span>密码：</span>
         <input type="password" v-model="loginForm.password" placeholder="">
       </div>
       <div class="from-wrapper">
@@ -29,10 +30,10 @@ export default {
   },
   computed: {
     loginName() {
-      return "用户名：" + this.loginForm.username;
+      return this.loginForm.username;
     },
     loginpw() {
-      return "密码：" + this.loginForm.password;
+      return this.loginForm.password;
     }
   },
   methods: {
@@ -51,6 +52,11 @@ form {
 .from-wrapper {
   text-align: left;
   margin: 10px 0 20px 50px;
+}
+
+.haha {
+  color: red;
+  position: absolute;
 }
 
 </style>
