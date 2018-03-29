@@ -7,8 +7,18 @@
         <p v-show="errors.has('username')" class="help haha">{{ errors.first('username') }}</p>
       </div>
       <div class="from-wrapper">
+        <span>手机：</span>
+        <input type="text" name="phone" v-validate="'required|numeric|max:22|xx'" v-model="loginForm.phone">
+        <p v-show="errors.has('phone')" class="help haha">{{ errors.first('phone') }}</p>
+      </div>
+      <div class="from-wrapper">
         <span>密码：</span>
         <input type="password" v-model="loginForm.password" placeholder="">
+      </div>
+      <div class="from-wrapper">
+        <span>数字：</span>
+        <input type="text" v-model="loginForm.number" v-validate="'required|max_value:100|min_value:10|'"  name="aa">
+        <p v-show="errors.has('aa')" class="help haha">{{ errors.first('aa') }}</p>
       </div>
       <div class="from-wrapper">
         <button @click="submit()">提交</button>
@@ -24,7 +34,9 @@ export default {
     return {
       loginForm: {
         username: '',
-        password: ''
+        phone: '',
+        password: '',
+        number:''
       }
     }
   },
