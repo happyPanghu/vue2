@@ -1,6 +1,10 @@
 <template>
   <div class="left-side">
     <div class="left-inside">
+      <p>
+        {{ store }}
+        {{ msg }}
+      </p>
       <ul>
         <li>
           <router-link to="/">首页</router-link>
@@ -19,8 +23,15 @@
   </div>
 </template>
 <script>
+import store from '@/vuex/store'
 export default {
-  name: 'left'
+  name: 'left',
+  data(){
+    return {
+      msg:'sfd'
+    }
+  },
+  store
 }
 
 </script>
