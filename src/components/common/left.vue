@@ -1,10 +1,9 @@
 <template>
   <div class="left-side">
     <div class="left-inside">
-      <p>
-        {{ store }}
-        {{ msg }}
-      </p>
+      <div>
+        {{ $store.state.count }}
+      </div>
       <ul>
         <li>
           <router-link to="/">首页</router-link>
@@ -26,9 +25,9 @@
 import store from '@/vuex/store'
 export default {
   name: 'left',
-  data(){
+  data() {
     return {
-      msg:'sfd'
+      msg: 'sfssd'
     }
   },
   store
